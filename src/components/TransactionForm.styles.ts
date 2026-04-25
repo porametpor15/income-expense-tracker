@@ -25,12 +25,12 @@ export const Label = styled.span`
   color: #334155;
 `
 
-const sharedInputStyles = `
+const sharedControlStyles = `
   width: 100%;
   box-sizing: border-box;
   border-radius: 16px;
   border: 1px solid rgba(51, 65, 85, 0.14);
-  background: rgba(248, 250, 252, 0.9);
+  background: rgba(255, 255, 255, 0.96);
   padding: 14px 16px;
   font: inherit;
   color: #122033;
@@ -45,11 +45,11 @@ const sharedInputStyles = `
 `
 
 export const Input = styled.input`
-  ${sharedInputStyles}
+  ${sharedControlStyles}
 `
 
 export const TextArea = styled.textarea`
-  ${sharedInputStyles}
+  ${sharedControlStyles}
   resize: vertical;
   min-height: 110px;
 `

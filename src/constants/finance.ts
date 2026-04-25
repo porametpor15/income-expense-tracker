@@ -2,6 +2,18 @@ import type { Entry, EntryFormValues } from '../types/finance'
 
 export const STORAGE_KEY = 'income-expense-tracker.entries'
 export const today = new Date().toISOString().slice(0, 10)
+export const categorySuggestions = [
+  'Travel',
+  'Food',
+  'Bill',
+  'Utilities',
+  'Transport',
+  'Shopping',
+  'Health',
+  'Entertainment',
+  'Work',
+  'General',
+]
 
 export const sampleEntries: Entry[] = [
   {
@@ -36,7 +48,7 @@ export const sampleEntries: Entry[] = [
 export const defaultEntryForm: EntryFormValues = {
   title: '',
   amount: '',
-  category: 'General',
+  category: '',
   type: 'expense',
   date: today,
   note: '',

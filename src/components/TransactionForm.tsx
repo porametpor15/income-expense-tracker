@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { defaultEntryForm } from '../constants/finance'
 import type { Entry, EntryFormValues } from '../types/finance'
 import { Panel, PanelHeader, PanelText, PanelTitle } from '../styles/panel'
+import { CategoryPicker } from './CategoryPicker'
 import {
   Field,
   FieldGrid,
@@ -84,10 +85,9 @@ export const TransactionForm = ({ onAddEntry }: TransactionFormProps) => {
 
           <Field>
             <Label>Category</Label>
-            <Input
+            <CategoryPicker
               value={form.category}
-              onChange={(event) => handleChange('category', event.target.value)}
-              placeholder="Food, Bills, Work"
+              onChange={(category) => handleChange('category', category)}
             />
           </Field>
 
